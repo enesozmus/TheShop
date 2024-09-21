@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+:root {
+  --primary-color: #ff6b6b;
+  --secondary-color: #794afa;
+  --secondary-dark-color: #453c5c;
+
+  --white-color: #ffffff;
+  --light-bg-color: #f2f3f5;
+  --light-text-color: #7c899a;
+  --border-color: #e5e8ec;
+  --dark-color: #0a021c;
+
+  --font-small: 13px;
+  --font-smaller: 11px;
+
+  --percent100: 100%;
+  --percent50: 50%;
+
+  --fw3: 300;
+  --fw5: 500;
+  --fw6: 600;
+  --fw7: 700;
+  --fw8: 800;
+
+  --trans-background-color: background-color .3s, color .3s;
+  --trans-background: background-color .3s;
+  --trans-color: color .3s;
+}
+
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+*,
+::before::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--dark-color);
+  background-color: var(--white-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Poppins';
+}
+
+h1 {
+  font-size: calc(1.3em + 1vw);
+  font-weight: var(--fw8);
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: var(--fw7);
+}
+
+h4 {
+  font-size: 1em;
+  font-weight: var(--fw6);
+}
+
+a {
+  color: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+strong {
+  font-weight: var(--fw8);
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input,
+textarea,
+button,
+select {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img,
+picture,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+
+/*-----------------------------------*\
+  #STRUCTURE STYLING
+\*-----------------------------------*/
+/*
+ --------------------------------------------------
+    00. Reusable Selectors
+
+    01. HEADER
+        a. Header Top
+        b. Header Nav
+        c. Header Main, Departments Category
+        d. Search Form
+        e. Responsive Menu - Off Canvas
+    02. SLIDER
+    03. BRANDS
+    04. PRODUCT
+        a. Global product
+        b. BIG product
+        c. MINI product
+        d. MAIN product
+    05. BANNER
+        a. News Letter
+        b. Widgets
+        c. Footer Info
+    06. BOTTOM MENU
+        a. Search
+    07. OVERLAY
+    08. PAGE SINGLE
+        a. Breadcrumb
+        b. Product details
+        c. Product description
+        d. Product Review
+        e. Product Review Form
+    09. PAGE SINGLE: SPECIAL OFFER
+    10. PAGE CATEGORY
+        a. Sidebar products filter
+        b. Products block
+    11. CART
+    12. PAGE CART
+    13. PAGE CHECKOUT
+    14. MODAL
+    15. RESPONSIVE
+--------------------------------------------------
+*/
+
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+
+/*-----------------------------------*\
+  #HEADER
+\*-----------------------------------*/
+
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
