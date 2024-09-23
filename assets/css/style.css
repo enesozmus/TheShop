@@ -780,6 +780,25 @@ form.search button:hover {
 
 
 /*-----------------------------------*\
+  #BRANDS
+\*-----------------------------------*/
+.brands .wrapper {
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding: 2em 0;
+}
+
+.brands .item img {
+	opacity: 0.25;
+	transition: opacity 0.3s;
+}
+
+.brands .item a:hover img {
+	opacity: 1;
+}
+
+
+/*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
 @media only screen and (min-width: 992px) {
