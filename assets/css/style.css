@@ -163,36 +163,36 @@ canvas {
         b. Header Nav
         c. Header Main, Departments Category
         d. Search Form
-        e. Responsive Menu - Off Canvas
-    02. SLIDER
-    03. BRANDS
-    04. PRODUCT
+    03. ASIDE - Responsive Mobile Menu - Off Canvas
+    03. SLIDER
+    04. BRANDS
+    05. PRODUCT
         a. Global product
         b. BIG product
         c. MINI product
         d. MAIN product
-    05. BANNER
+    06. BANNER
         a. News Letter
         b. Widgets
         c. Footer Info
-    06. BOTTOM MENU
+    07. BOTTOM MENU
         a. Search
-    07. OVERLAY
-    08. PAGE SINGLE
+    08. OVERLAY
+    09. PAGE SINGLE
         a. Breadcrumb
         b. Product details
         c. Product description
         d. Product Review
         e. Product Review Form
-    09. PAGE SINGLE: SPECIAL OFFER
-    10. PAGE CATEGORY
+    10. PAGE SINGLE: SPECIAL OFFER
+    11. PAGE CATEGORY
         a. Sidebar products filter
         b. Products block
-    11. CART
-    12. PAGE CART
-    13. PAGE CHECKOUT
-    14. MODAL
-    15. RESPONSIVE
+    12. CART
+    13. PAGE CART
+    14. PAGE CHECKOUT
+    15. MODAL
+    16. RESPONSIVE
 --------------------------------------------------
 */
 
@@ -585,9 +585,10 @@ form.search button:hover {
   background-color: var(--dark-color);
 }
 
-/* #ASIDE
-      a. Responsive Menu -  off Canvas
- */
+
+/*-----------------------------------*\
+  #ASIDE
+\*-----------------------------------*/
 .site-off {
   position: fixed;
   width: 320px;
@@ -720,6 +721,61 @@ form.search button:hover {
   border: 1px solid var(--border-color);
   line-height: 16px;
   margin: 0 0.5em 0.5em 0;
+}
+
+
+/*-----------------------------------*\
+  #SLIDER
+\*-----------------------------------*/
+.slider .item {
+	position: relative;
+	height: 474px;
+}
+
+.slider .item::before {
+	content: "";
+	position: absolute;
+	top: 30%;
+	left: 0;
+	width: 450px;
+	height: 300px;
+	background-color: var(--white-color);
+	z-index: 1;
+	filter: blur(50px);
+	opacity: 0.8;
+}
+
+.slider .text-content {
+	position: relative;
+	height: 100%;
+	justify-content: flex-end;
+	padding: 0 0 10% 10%;
+	z-index: 1;
+}
+
+.slider h4 {
+	font-size: var(--font-small);
+	font-weight: var(--fw7);
+	width: fit-content;
+	padding: 4px 10px;
+	background-color: var(--dark-color);
+	color: var(--white-color);
+	border-radius: 4px;
+}
+
+.text-content :where(h2, h3) span:first-child {
+	font-weight: var(--fw3);
+	color: var(--light-text-color);
+}
+
+.text-content :where(h2, h3) span:last-child {
+	color: var(--secondary-dark-color);
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+	background-color: var(--secondary-dark-color);
 }
 
 
@@ -920,4 +976,10 @@ form.search button:hover {
   .dpt-menu .has-child:hover .mega {
     display: flex;
   }
+
+  /* slider */
+	.slider > div > .wrapper {
+		width: calc(100% - (300px + 2em));
+		margin-left: auto;
+	}
 }
