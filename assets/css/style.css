@@ -1388,9 +1388,10 @@ form.search button:hover {
   }
 
   /* products */
-  .trending .products {
-    flex: 0 0 33.3333%;
-  }
+	.trending .products,
+	.product-categories .row {
+		flex: 0 0 33.3333%;
+	}
 
   .products.big .media {
     max-height: 373px;
