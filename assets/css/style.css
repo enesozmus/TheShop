@@ -1166,7 +1166,7 @@ form.search button:hover {
   #FOOTER
 \*-----------------------------------*/
 /* #FOOTER
-      d. News letter
+    a. News letter
  */
  .newsletter {
 	padding: 2.5em 0;
@@ -1193,6 +1193,14 @@ form.search button:hover {
 	width: 100%;
 }
 
+/* #FOOTER
+    b. Widgets
+ */
+ .widgets {
+	padding: 3.5em 2.5em;
+	background-color: var(--light-bg-color);
+}
+
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
@@ -1207,10 +1215,11 @@ form.search button:hover {
     font-size: 1.25em;
   }
 
-  .products.mini,
-  .banner .row {
-    flex: 0 0 50%;
-  }
+	.products.mini,
+	.banner .row,
+  .widgets .row {
+		flex: 0 0 50%;
+	}
 
   .products.main .item {
     flex: 0 0 33.3333%;
@@ -1428,9 +1437,10 @@ form.search button:hover {
     max-height: 373px;
   }
 
-  .products.main .item {
-    flex: 0 0 25%;
-  }
+	.products.main .item,
+	.widgets .row {
+		flex: 0 0 25%;
+	}
 
   /* footer */
   .newsletter .box {
