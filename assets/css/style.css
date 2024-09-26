@@ -1323,22 +1323,130 @@ form.search button:hover {
   #OVERLAY
 \*-----------------------------------*/
 .overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	z-index: 999;
-	background-color: rgba(0 0 0 / 0.4);
-	visibility: hidden;
-	opacity: 0;
-	will-change: visibility, opacity;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  background-color: rgba(0 0 0 / 0.4);
+  visibility: hidden;
+  opacity: 0;
+  will-change: visibility, opacity;
 }
 
-/* :where(.showmenu, .showmodal) .overlay {
-	opacity: 1;
-	visibility: inherit;
-} */
+:where(.showmenu, .showmodal) .overlay {
+  opacity: 1;
+  visibility: inherit;
+}
+
+
+/*-----------------------------------*\
+  #PAGE SINGLE
+\*-----------------------------------*/
+/* #SINGLE
+    a. Department menu
+ */
+.page-home .dpt-cat .dpt-trigger,
+.dpt-trigger .ri-close-line,
+.showdpt .dpt-trigger .ri-menu-3-line {
+  display: none;
+}
+
+.showdpt .dpt-trigger .ri-close-line {
+  display: block;
+}
+
+/* #SINGLE
+    b. Breadcrumb
+ */
+.breadcrumb {
+  font-size: var(--font-small);
+  margin-bottom: 2em;
+}
+
+.breadcrumb li:not(:last-child)::after {
+  content: "/";
+  padding: 0 0.35em;
+}
+
+.breadcrumb li:last-child {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--light-text-color);
+}
+
+ /* #SINGLE
+    b. Product Details
+ */
+.products.one .item {
+	flex-direction: column;
+}
+
+.products.one .price .discount {
+	font-size: 1em;
+	font-weight: var(--fw7);
+	line-height: 1;
+	position: absolute;
+	top: 0;
+	bottom: auto;
+	padding: 1em;
+	z-index: 2;
+	background-color: var(--dark-color);
+	color: var(--white-color);
+	border-radius: 50%;
+	margin: 0.5em;
+}
+
+.products.one :where(.big-image, .small-image) {
+	overflow: hidden;
+}
+
+.products.one .big-image {
+	position: relative;
+	margin-bottom: 1em;
+}
+
+.products.one :where(.big-image, .small-image) img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.products.one .thumbnail-show {
+	position: relative;
+	width: 130px;
+	height: 110px;
+	overflow: hidden;
+	margin: 0 2em 2em 0;
+}
+
+.products :is(.swiper-button-next, .swiper-button-prev) {
+	outline: 0;
+	color: var(--secondary-dark-color);
+	transition: var(--trans-background), transform 0.3s;
+}
+
+.products .big-image:hover .swiper-button-next {
+	transform: translateX(10px);
+}
+
+.products .big-image:hover .swiper-button-prev {
+	transform: translateX(-10px);
+}
+
+.products :is(.swiper-button-next, .swiper-button-prev)::after {
+	font-size: 1.5em;
+}
+
+.products .big-image:hover :is(.swiper-button-next, .swiper-button-prev) {
+	background-color: var(--light-bg-color);
+}
+
+/* lightbox: go to fslightbox.com */
 
 /*-----------------------------------*\
   #MEDIA QUERIES
@@ -1347,6 +1455,19 @@ form.search button:hover {
   .products.main .item {
     flex: 0 0 50%;
   }
+
+  	/* page single */
+	.products.one .big-image {
+		margin-bottom: 2em;
+	}
+
+	.products.one .image-show {
+		height: 680px;
+	}
+
+	.products.one .thumbnail-show {
+		height: 160px;
+	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -1362,6 +1483,17 @@ form.search button:hover {
 
   .products.main .item {
     flex: 0 0 33.3333%;
+  }
+
+  .products.one .row {
+    flex: 0 0 50%;
+    width: 50%;
+  }
+
+  .products.one .is_sticky,
+  .is_sticky {
+    position: sticky;
+    top: 2em;
   }
 }
 
@@ -1586,5 +1718,14 @@ form.search button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  /* page single */
+  #page:not(.page-home) .dpt-menu {
+    display: none;
+  }
+
+  #page.showdpt .dpt-menu {
+    display: block;
   }
 }
