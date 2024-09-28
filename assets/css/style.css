@@ -61,7 +61,7 @@ body {
 
 body {
   font-family: 'Rubik', sans-serif;
-  font-size: 1.7rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.4;
   color: var(--dark-color);
@@ -1611,7 +1611,6 @@ form.search button:hover {
 	font-size: var(--font-small);
 }
 
-
 .products .collapse .content li span:first-child {
 	min-width: 100px;
 	display: inline-flex;
@@ -1758,6 +1757,54 @@ form label {
 	margin-bottom: 0.5em;
 	text-transform: uppercase;
 }
+
+
+/*-----------------------------------*\
+  #OFFER
+\*-----------------------------------*/
+.page-single .stock {
+	margin: 2em 0;
+}
+
+.page-single .stock .qty span:last-child {
+	color: initial;
+}
+
+.single-product .stock .bar {
+	height: 10px;
+}
+
+.page-single .stock .bar .available {
+	margin: 0;
+	border-radius: 0;
+	background-color: var(--secondary-dark-color);
+}
+
+.related-products .content {
+	height: 100%;
+}
+
+.related-products .offer {
+	margin: 0;
+}
+
+.related-products .offer p {
+	margin: 0 1em 0 0;
+	text-transform: none;
+	line-height: 9;
+}
+
+.related-products .offer ul li {
+	width: 28px;
+	height: 28px;
+	font-size: var(--font-small);
+	padding: 0.5em 0.25em;
+}
+
+.related-products .content .stock {
+	margin-top: auto;
+}
+
 
 /*-----------------------------------*\
   #MEDIA QUERIES
